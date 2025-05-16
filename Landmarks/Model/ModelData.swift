@@ -11,6 +11,8 @@ import Foundation
 class ModelData {
     //landmarkData.jsonから初期化するランドマークの配列を作成
     var landmarks: [Landmark] = load("landmarkData.json")
+    //hikes配列をモデルにロード
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 
