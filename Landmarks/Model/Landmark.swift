@@ -18,6 +18,16 @@ struct Landmark: Hashable, Codable, Identifiable{
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
+    
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        //データファイル内の名前を一致させる
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+
     //データから画像の名前を読み取るプロパティ
     private var imageName: String
     //アセットカタログから画像を読み込む計算プロパティ
