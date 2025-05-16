@@ -13,6 +13,7 @@ class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
     //hikes配列をモデルにロード
     var hikes: [Hike] = load("hikeData.json")
+    var profile = Profile.default
     
     var features: [Landmark] {
             landmarks.filter { $0.isFeatured }
